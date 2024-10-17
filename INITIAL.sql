@@ -15,4 +15,4 @@ CREATE TABLE raw_data.sales (
     brand_origin VARCHAR(255)
 );
 
-\copy raw_data.sales (id, auto, gasoline_consumption, price, date, person_name, phone, discount, brand_origin) FROM '/Users/cars.csv' CSV HEADER;
+\copy raw_data.sales (id, auto, gasoline_consumption, price, date, person_name, phone, discount, brand_origin) FROM '/Users/cars.csv' WITH (FORMAT csv, DELIMITER ',', NULL 'null', HEADER true);
